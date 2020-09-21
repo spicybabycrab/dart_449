@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-family: 'Comfortaa', cursive;
+  color: #000;
+  background-color: #0032eb;
+}
+
+/* NAV */
+.flex-container {
+  background-color: #0032eb;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container>div {
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #0032eb;
+  background-color: #00ffff;
+  font-style: italic;
+  transition: 0.1s;
+}
+
+#readings a{
+  color: #00ffff;
+}
+
+/* MAIN */
+main {
+	padding:20px;
+	display: grid;
+	grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  display: block;
+  width: 100%;
+  border: solid 2px black;
+  border-radius: 10px;
+  overflow: hidden;
+  color:black;
+  background:black;
+  transition: all ease  0.4s;
+}
+
+.info {
+  height: 100%;
+  background: white;
+}
+
+.card h2, h3, p {
+  padding: 10px;
+}
+
+.card h2 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.5vmax;
+}
+
+.card h3 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: normal;
+  font-size: 2vmax;
+}
+
+.card p {
+  font-size: 75%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+.card img {
+  width: 100%;
+  /* min-height: 400px; */
+  mix-blend-mode: screen;
+  -webkit-filter: grayscale(100%) contrast(200%);
+  filter: grayscale(100%) contrast(150%);
+  opacity: 1;
+}
+
+.card a{
+  color: #0032eb;
+}
+
+/* DESKTOP VIEW */
+@media only screen and (min-width: 768px) {
+  .card {
+    display: block;
+    width: 100%;
+    border: solid 2px #0032eb;
+    border-radius: 10px;
+    overflow: hidden;
+    color:#0032eb;
+    background:#0032eb;
+    transition: all ease  0.4s;
+  }
+
+  .card:hover {
+    background: black;
+    border: solid black 2px;
+    color: black;
+  }
